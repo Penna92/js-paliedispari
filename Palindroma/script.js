@@ -20,4 +20,4 @@ function palindroma(parola) {
 
 let parolaPalindroma = palindroma(parola);
 // console.log(parolaPalindroma);
-document.writeln("La parola che hai scritto " + parolaPalindroma);
+document.getElementById("app").innerHTML += ("<p>La parola che hai scritto (" + parola + ") "  + parolaPalindroma + "</p>");

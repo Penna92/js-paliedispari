@@ -32,11 +32,11 @@ function myFunction() {
   // FUNZIONE PER STABILIRE SE LA SOMMA DEI 2 NUMERI E' PARI O DISPARI
   function checkPari(userNumber, numeroPC) {
     let somma = userNumber + numeroPC;
-    if (somma % 2 === 0) {
-      return "<p>La somma dei due numeri (" + somma + ") è dispari: HAI PERSO!</p>";
+    if (somma % 2 !== 0) {
+        return "<p>La somma dei due numeri (" + somma + ") è dispari: HAI VINTO!</p>";
     } else {
-      return "<p>La somma dei due numeri (" + somma + ") è pari: HAI VINTO!</p>";
-    }
+        return "<p>La somma dei due numeri (" + somma + ") è pari: HAI PERSO!</p>";
+  }
   }
   let checkPariDispari = checkPari(userNumber, numeroPC);
 
