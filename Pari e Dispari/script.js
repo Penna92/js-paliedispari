@@ -18,7 +18,7 @@ function myFunction() {
   // console.log(userNumber);
   if (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
     alert(
-      "Non hai inserito un numero compreso tra 1 e 5: riaggiorna e riprova."
+      "Non hai inserito un numero compreso tra 1 e 5: riprova."
     );
   }
 
@@ -33,22 +33,22 @@ function myFunction() {
   function checkPari(userNumber, numeroPC) {
     let somma = userNumber + numeroPC;
     if (somma % 2 === 0) {
-      return "La somma dei due numeri (" + somma + ") è pari: HAI PERSO!";
+      return "<p>La somma dei due numeri (" + somma + ") è dispari: HAI PERSO!</p>";
     } else {
-      return "La somma dei due numeri (" + somma + ") è dispari: HAI VINTO!";
+      return "<p>La somma dei due numeri (" + somma + ") è pari: HAI VINTO!</p>";
     }
   }
   let checkPariDispari = checkPari(userNumber, numeroPC);
 
   // CONDIZIONI PER LA STAMPA SU SCHERMO
   if (!isNaN(userNumber) && userNumber >= 1 && userNumber <= 5) {
-    document.writeln("<p>Hai inserito il numero: " + userNumber + "</p>");
-    document.writeln("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
-    document.writeln(checkPariDispari);
+    document.getElementById("results").innerHTML += ("<p>Hai inserito il numero: " + userNumber + "</p>");
+    document.getElementById("results").innerHTML += ("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
+    document.getElementById("results").innerHTML += (checkPariDispari);
   } else {
-    document.writeln("Non hai inserito un numero valido");
-    document.writeln("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
-    document.writeln("<p>Non è stato possibile effettuare la somma</p>");
+    document.getElementById("results").innerHTML += ("<p>Non hai inserito un numero valido</p>");
+    document.getElementById("results").innerHTML += ("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
+    document.getElementById("results").innerHTML += ("<p>Non è stato possibile effettuare la somma</p>");
   }
 }
 
@@ -63,7 +63,7 @@ function myFunction2() {
   // console.log(userNumber);
   if (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
     alert(
-      "Non hai inserito un numero compreso tra 1 e 5: riaggiorna e riprova."
+      "Non hai inserito un numero compreso tra 1 e 5: riprova."
     );
   }
 
@@ -78,21 +78,21 @@ function myFunction2() {
   function checkPari(userNumber, numeroPC) {
     let somma = userNumber + numeroPC;
     if (somma % 2 === 0) {
-      return "La somma dei due numeri (" + somma + ") è pari: HAI VINTO!";
+      return "<p>La somma dei due numeri (" + somma + ") è pari: HAI VINTO!</p>";
     } else {
-      return "La somma dei due numeri (" + somma + ") è dispari: HAI PERSO!";
+      return "<p>La somma dei due numeri (" + somma + ") è dispari: HAI PERSO!</p>";
     }
   }
   let checkPariDispari = checkPari(userNumber, numeroPC);
 
   // CONDIZIONI PER LA STAMPA SU SCHERMO
   if (!isNaN(userNumber) && userNumber >= 1 && userNumber <= 5) {
-    document.writeln("<p>Hai inserito il numero: " + userNumber + "</p>");
-    document.writeln("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
-    document.writeln(checkPariDispari);
+    document.getElementById("results").innerHTML += ("<p>Hai inserito il numero: " + userNumber + "</p>");
+    document.getElementById("results").innerHTML += ("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
+    document.getElementById("results").innerHTML += (checkPariDispari);
   } else {
-    document.writeln("Non hai inserito un numero valido");
-    document.writeln("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
-    document.writeln("<p>Non è stato possibile effettuare la somma</p>");
+    document.getElementById("results").innerHTML += ("<p>Non hai inserito un numero valido</p>");
+    document.getElementById("results").innerHTML += ("<p>Il pc ha inserito il numero: " + numeroPC + "</p>");
+    document.getElementById("results").innerHTML += ("<p>Non è stato possibile effettuare la somma</p>");
   }
 }
