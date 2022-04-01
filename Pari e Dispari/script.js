@@ -55,9 +55,9 @@ function myFunction() {
 //SE SCEGLIE PARI :
 document
   .getElementById("btn2")
-  .addEventListener("click", myFunction);
+  .addEventListener("click", myFunction2);
 
-function myFunction() {
+function myFunction2() {
   // CHIEDERE UN NUMERO DA 1 A 5 ALL'UTENTE
   let userNumber = parseInt(prompt("Inserisci un numero compreso tra 1 e 5"));
   // console.log(userNumber);
